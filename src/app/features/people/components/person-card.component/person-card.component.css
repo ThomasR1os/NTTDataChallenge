@@ -1,0 +1,25 @@
+.card {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: white;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.info h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+.info p {
+  margin: 2px 0;
+  font-size: 13px;
+}

@@ -1,0 +1,22 @@
+<section class="panel">
+  <header class="panel__header">
+    <div>
+      <h1>Lista de personas</h1>
+      <p>Mostrando {{ total() }} resultados</p>
+    </div>
+
+    <button (click)="load()" [disabled]="loading()">Recargar</button>
+  </header>
+
+  @if (loading()) {
+    <p class="state">Cargando...</p>
+  } @else if (error()) {
+    <p class="state state--error">{{ error() }}</p>
+  } @else {
+    <div class="grid">
+      @for (p of people(); track p.email) {
+        <app-person-card [person]="p" />
+      }
+    </div>
+  }
+</section>

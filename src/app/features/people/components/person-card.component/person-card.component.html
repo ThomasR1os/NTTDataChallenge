@@ -1,0 +1,12 @@
+<article class="card">
+  <img class="avatar" [src]="person.photoUrl" [alt]="person.fullName" />
+
+  <div class="info">
+    <h3>{{ person.fullName }}</h3>
+
+    <p><strong>Género:</strong> {{ person.gender }}</p>
+    <p><strong>Ubicación:</strong> {{ person.location }}</p>
+    <p><strong>Email:</strong> {{ person.email }}</p>
+    <p><strong>Nacimiento:</strong> {{ person.birthDate | date:'yyyy-MM-dd' }}</p>
+  </div>
+</article>
